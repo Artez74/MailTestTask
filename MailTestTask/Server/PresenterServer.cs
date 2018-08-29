@@ -14,14 +14,43 @@ namespace Server
         private readonly IModelServer model;
         bool blnStartStop;
         ServiceHost host;
-        
+        readonly TransferService transferService = new TransferService();
+
         public PresenterServer(IViewServer view, IModelServer model)
         {
             this.view = view;
             this.model = model;
+            TransferService.Message += TransferService_Message;
         }
 
-        public void StartStopServer()
+        private void TransferService_Message(Data.TransferMessage transferMessage, object sender)
+        {
+            try
+            {
+                model.Save(transferMessage);
+                view.ShowEnterMessage(transferMessage);
+            }
+            catch (Exception ex)
+            {
+                view.ShowErrorMessage(ex.Message);
+            }
+
+            return;
+        }
+
+        public void PrintData()
+        {
+            try
+            {
+                view.PrintData(model.GetData());
+            }
+            catch (Exception ex)
+            {
+                view.ShowErrorMessage(ex.Message);
+            }
+        }
+
+            public void StartStopServer()
         {
             blnStartStop = !blnStartStop;
             if (blnStartStop)

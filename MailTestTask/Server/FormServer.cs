@@ -8,6 +8,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Data;
 using Transfer;
 
 namespace Server
@@ -15,12 +16,10 @@ namespace Server
     public partial class FormServer : Form, IViewServer
     {
         PresenterServer presenter;
-        ServiceHost host;
-        //TransferService cs = new TransferService();
-        public FormServer()
+       public FormServer()
         {
             InitializeComponent();
-            presenter = new PresenterServer(this, new ModelServer());
+            presenter = new PresenterServer(this, new ModelServer(new WorkerToXml("Base.xml")));
         }
 
         public void ChangeBtnStartStop(bool state)
@@ -39,7 +38,27 @@ namespace Server
             }
         }
 
-            private void BtnClear_Click(object sender, EventArgs e)
+        public void ShowEnterMessage(TransferMessage transferMessage)
+        {
+            lstPrint.Items.Add((new PrintMessage() { Date = DateTime.Now, ip = transferMessage.ip, Message = transferMessage.Message }).ToString());
+        }
+
+        public void ShowErrorMessage(string errorMessage)
+        {
+            MessageBox.Show(errorMessage);
+        }
+
+        public void PrintData(IEnumerable<PrintMessage> printMessages)
+        {
+            lstPrint.Items.Add("");
+            lstPrint.Items.Add("Печать данных...");
+            foreach (var item in printMessages)
+            {
+                lstPrint.Items.Add(item);
+            }
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
         {
             lstPrint.Items.Clear();
         }
@@ -47,6 +66,11 @@ namespace Server
         private void BtnStartStop_Click(object sender, EventArgs e)
         {
             presenter.StartStopServer();
+        }
+
+        private void PrintMainMenuItem_Click(object sender, EventArgs e)
+        {
+            presenter.PrintData();
         }
     }
 }

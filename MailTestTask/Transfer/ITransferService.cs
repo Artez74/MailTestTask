@@ -1,4 +1,5 @@
-﻿using System.ServiceModel;
+﻿using Data;
+using System.ServiceModel;
 
 namespace Transfer
 {
@@ -6,7 +7,7 @@ namespace Transfer
     interface ITransferService
     {
         [OperationContract]
-        int SaveData(TransferMessage dataMessage, string ip);
+        int SaveData(TransferMessage dataMessage);
 
     }
 }

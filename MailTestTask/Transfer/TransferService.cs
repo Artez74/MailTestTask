@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Data;
 
 namespace Transfer
 {
+    public delegate void MessageFromClient(TransferMessage transferMessage, object sender);
+
     public class TransferService : ITransferService
     {
-        public int SaveData(TransferMessage dataMessage, string ip)
+        public static event MessageFromClient Message;
+        public int SaveData(TransferMessage dataMessage)
         {
+            Message?.Invoke(dataMessage, this);
             return 0;
         }
     }

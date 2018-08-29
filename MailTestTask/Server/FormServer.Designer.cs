@@ -59,6 +59,7 @@
             this.PrintMainMenuItem.Name = "PrintMainMenuItem";
             this.PrintMainMenuItem.Size = new System.Drawing.Size(58, 20);
             this.PrintMainMenuItem.Text = "Печать";
+            this.PrintMainMenuItem.Click += new System.EventHandler(this.PrintMainMenuItem_Click);
             // 
             // btnClear
             // 
@@ -80,7 +81,7 @@
             this.btnStartStop.UseVisualStyleBackColor = true;
             this.btnStartStop.Click += new System.EventHandler(this.BtnStartStop_Click);
             // 
-            // ViewServer
+            // FormServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,7 +91,7 @@
             this.Controls.Add(this.lstPrint);
             this.Controls.Add(this.MainMenu);
             this.MainMenuStrip = this.MainMenu;
-            this.Name = "ViewServer";
+            this.Name = "FormServer";
             this.Text = "Server";
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();

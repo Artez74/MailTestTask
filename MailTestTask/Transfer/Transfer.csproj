@@ -46,9 +46,9 @@
     <Compile Include="TransferService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TransferData\TransferData.csproj">
+    <ProjectReference Include="..\TransferData\Data.csproj">
       <Project>{9c1201e9-4d8d-4523-80f6-1211e077e6f6}</Project>
-      <Name>TransferData</Name>
+      <Name>Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

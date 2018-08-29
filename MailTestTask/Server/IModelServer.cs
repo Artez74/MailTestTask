@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,9 @@ namespace Server
 {
     interface IModelServer
     {
+        //ICollection<PrintMessage> GetMessages();
+        void Save(TransferMessage transferMessage);
+        IEnumerable<PrintMessage> GetData();
+        
     }
 }
