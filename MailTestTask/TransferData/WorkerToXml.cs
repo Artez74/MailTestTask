@@ -28,25 +28,35 @@ namespace Data
             return items;
         }
 
+        private XElement CheckExistFile()
+        {
+            if(File.Exists(fileName))
+            {
+                var xdoc = XDocument.Load(fileName);
+                var root = xdoc.Element("Messages");
+                File.Delete(fileName);
+                return root;
+            }
+            return new XElement("Messages");
+        }
+
         public void Save(TransferMessage message)
         {
-            XDocument xdoc;
-            XElement root;
             try
             {
-                if (!File.Exists(fileName))
-                {
-                    root = new XElement("Messages");
-                    //xdoc.Save(_fileName);
-                }
-                else
-                {
-                    xdoc = XDocument.Load(fileName);
-                    root = xdoc.Element("Messages");
-                    File.Delete(fileName);
-                }
+                //if (!File.Exists(fileName))
+                //{
+                //    root = new XElement("Messages");
+                //}
+                //else
+                //{
+                //    xdoc = XDocument.Load(fileName);
+                //    root = xdoc.Element("Messages");
+                //    File.Delete(fileName);
+                //}
 
-                xdoc = new XDocument();
+                var xdoc = new XDocument();
+                XElement root = CheckExistFile();
 
 
                 root.Add(new XElement("Message",

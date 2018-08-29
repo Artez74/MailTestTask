@@ -1,0 +1,11 @@
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Assembless\Debug\Server.exe.config
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Assembless\Debug\Server.exe
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Assembless\Debug\Server.pdb
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Server\obj\Debug\Server.FormServer.resources
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Server\obj\Debug\Server.exe
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Server\obj\Debug\Server.pdb
