@@ -1,0 +1,1 @@
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Transfer\obj\Debug\Transfer.csproj.CoreCompileInputs.cache
