@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Transfer
 {
-    public class Transfer : ITransfer
+    public class TransferService : ITransferService
     {
         public int SaveData(TransferMessage dataMessage, string ip)
         {

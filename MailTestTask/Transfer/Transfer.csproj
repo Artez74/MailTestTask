@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ITransfer.cs" />
-    <Compile Include="Transfer.cs" />
+    <Compile Include="ITransferService.cs" />
+    <Compile Include="TransferService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TransferData\TransferData.csproj">

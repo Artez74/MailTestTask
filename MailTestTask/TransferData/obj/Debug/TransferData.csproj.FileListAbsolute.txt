@@ -3,3 +3,5 @@ C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Assembless\TransferDat
 C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\TransferData\obj\Debug\TransferData.csproj.CoreCompileInputs.cache
 C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\TransferData\obj\Debug\TransferData.dll
 C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\TransferData\obj\Debug\TransferData.pdb
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Assembless\Debug\TransferData.dll
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Assembless\Debug\TransferData.pdb

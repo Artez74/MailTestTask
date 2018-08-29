@@ -3,7 +3,7 @@
 namespace Transfer
 {
     [ServiceContract]
-    interface ITransfer
+    interface ITransferService
     {
         [OperationContract]
         int SaveData(TransferMessage dataMessage, string ip);
