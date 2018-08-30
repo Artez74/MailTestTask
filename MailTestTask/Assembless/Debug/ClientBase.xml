@@ -40,4 +40,16 @@
     <IsTransfer>true</IsTransfer>
     <DateTime>30.08.2018 19:28:33</DateTime>
   </Message>
+  <Message text="123">
+    <IsTransfer>true</IsTransfer>
+    <DateTime>30.08.2018 19:40:29</DateTime>
+  </Message>
+  <Message text="123">
+    <IsTransfer>true</IsTransfer>
+    <DateTime>30.08.2018 19:42:52</DateTime>
+  </Message>
+  <Message text="333">
+    <IsTransfer>true</IsTransfer>
+    <DateTime>30.08.2018 19:42:57</DateTime>
+  </Message>
 </Messages>

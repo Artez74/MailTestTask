@@ -32,11 +32,12 @@
             this.btnSendMessage = new System.Windows.Forms.Button();
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.timerSendMessage = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSendMessage
             // 
-            this.btnSendMessage.Location = new System.Drawing.Point(258, 56);
+            this.btnSendMessage.Location = new System.Drawing.Point(258, 63);
             this.btnSendMessage.Name = "btnSendMessage";
             this.btnSendMessage.Size = new System.Drawing.Size(103, 35);
             this.btnSendMessage.TabIndex = 0;
@@ -46,9 +47,9 @@
             // 
             // tbMessage
             // 
-            this.tbMessage.Location = new System.Drawing.Point(12, 21);
+            this.tbMessage.Location = new System.Drawing.Point(83, 23);
             this.tbMessage.Name = "tbMessage";
-            this.tbMessage.Size = new System.Drawing.Size(349, 20);
+            this.tbMessage.Size = new System.Drawing.Size(278, 20);
             this.tbMessage.TabIndex = 1;
             // 
             // timerSendMessage
@@ -56,11 +57,21 @@
             this.timerSendMessage.Interval = 10000;
             this.timerSendMessage.Tick += new System.EventHandler(this.timerSendMessage_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Сообщение";
+            // 
             // FormClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 113);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tbMessage);
             this.Controls.Add(this.btnSendMessage);
             this.Name = "FormClient";
@@ -76,6 +87,7 @@
         private System.Windows.Forms.Button btnSendMessage;
         private System.Windows.Forms.TextBox tbMessage;
         private System.Windows.Forms.Timer timerSendMessage;
+        private System.Windows.Forms.Label label1;
     }
 }
 
