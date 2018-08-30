@@ -9,79 +9,17 @@
 //------------------------------------------------------------------------------
 
 namespace Client.TransferService {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TransferMessage", Namespace="http://schemas.datacontract.org/2004/07/Data")]
-    [System.SerializableAttribute()]
-    public partial struct TransferMessage : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MessageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ipField;
-        
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Message {
-            get {
-                return this.MessageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
-                    this.MessageField = value;
-                    this.RaisePropertyChanged("Message");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ip {
-            get {
-                return this.ipField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ipField, value) != true)) {
-                    this.ipField = value;
-                    this.RaisePropertyChanged("ip");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TransferService.ITransferService")]
     public interface ITransferService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransferService/SaveData", ReplyAction="http://tempuri.org/ITransferService/SaveDataResponse")]
-        int SaveData(Client.TransferService.TransferMessage dataMessage);
+        int SaveData(Data.TransferMessage[] dataMessage);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITransferService/SaveData", ReplyAction="http://tempuri.org/ITransferService/SaveDataResponse")]
-        System.Threading.Tasks.Task<int> SaveDataAsync(Client.TransferService.TransferMessage dataMessage);
+        System.Threading.Tasks.Task<int> SaveDataAsync(Data.TransferMessage[] dataMessage);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,11 +49,11 @@ namespace Client.TransferService {
                 base(binding, remoteAddress) {
         }
         
-        public int SaveData(Client.TransferService.TransferMessage dataMessage) {
+        public int SaveData(Data.TransferMessage[] dataMessage) {
             return base.Channel.SaveData(dataMessage);
         }
         
-        public System.Threading.Tasks.Task<int> SaveDataAsync(Client.TransferService.TransferMessage dataMessage) {
+        public System.Threading.Tasks.Task<int> SaveDataAsync(Data.TransferMessage[] dataMessage) {
             return base.Channel.SaveDataAsync(dataMessage);
         }
     }

@@ -38,9 +38,10 @@ namespace Server
             }
         }
 
-        public void ShowEnterMessage(TransferMessage transferMessage)
+        public void ShowEnterMessage(TransferMessage[] transferMessage)
         {
-            lstPrint.Items.Add((new PrintMessage() { Date = DateTime.Now, ip = transferMessage.ip, Message = transferMessage.Message }).ToString());
+            foreach(var item in transferMessage)
+                lstPrint.Items.Add((new PrintMessage() { Date = DateTime.Now, ip = item.ip, Message = item.Message }).ToString());
         }
 
         public void ShowErrorMessage(string errorMessage)
@@ -52,6 +53,7 @@ namespace Server
         {
             lstPrint.Items.Add("");
             lstPrint.Items.Add("Печать данных...");
+            //lstPrint.DataSource = printMessages;
             foreach (var item in printMessages)
             {
                 lstPrint.Items.Add(item);
@@ -71,6 +73,11 @@ namespace Server
         private void PrintMainMenuItem_Click(object sender, EventArgs e)
         {
             presenter.PrintData();
+        }
+
+        private void FormServer_Load(object sender, EventArgs e)
+        {
+            presenter.StartStopServer();
         }
     }
 }

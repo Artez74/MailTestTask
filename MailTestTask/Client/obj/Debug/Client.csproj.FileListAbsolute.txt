@@ -2,9 +2,10 @@ C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Assembless\Debug\Clien
 C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Assembless\Debug\Client.exe
 C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Assembless\Debug\Client.pdb
 C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Client\obj\Debug\Client.csprojAssemblyReference.cache
-C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Client\obj\Debug\Client.Form1.resources
 C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Client\obj\Debug\Client.Properties.Resources.resources
 C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Client\obj\Debug\Client.csproj.GenerateResource.cache
 C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Client\obj\Debug\Client.exe
 C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Client\obj\Debug\Client.pdb
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Client\obj\Debug\Client.FormClient.resources
+C:\Users\Artez\Documents\GitHub\MailTestTask\MailTestTask\Client\obj\Debug\Client.csproj.CopyComplete

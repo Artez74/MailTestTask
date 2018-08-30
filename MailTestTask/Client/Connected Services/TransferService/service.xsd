@@ -4,7 +4,7 @@
   <xs:element name="SaveData">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="dataMessage" type="q1:TransferMessage" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="dataMessage" nillable="true" type="q1:ArrayOfTransferMessage" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -17,11 +17,13 @@ namespace Server
 
         public IEnumerable<PrintMessage> GetData()
         {
+            //получаем данные для печати
             return saver.GetData();
         }
 
-        public void Save(TransferMessage transferMessage)
+        public void Save(TransferMessage[] transferMessage)
         {
+            //сохраняем в базу
             saver.Save(transferMessage);
         }
     }

@@ -8,15 +8,21 @@ namespace Data
 {
     public class WorkerToXml : IWorker
     {
-        private readonly string fileName;
+        protected object sync = new object();
+        protected readonly string fileName;
         public WorkerToXml(string fileName)
         {
             this.fileName = fileName;
         }
 
-        public IEnumerable<PrintMessage> GetData()
+        public virtual IEnumerable<PrintMessage>  GetData()
         {
-                XDocument xdoc = XDocument.Load(fileName);
+            //получаем сообщения для печати
+            XDocument xdoc;
+            lock (sync)
+            {
+                xdoc = XDocument.Load(fileName);
+            }
                 var items = from xe in xdoc.Element("Messages").Elements("Message")
 
                             select new PrintMessage
@@ -28,48 +34,46 @@ namespace Data
             return items;
         }
 
-        private XElement CheckExistFile()
+        protected XElement CheckExistFile()
         {
-            if(File.Exists(fileName))
-            {
-                var xdoc = XDocument.Load(fileName);
-                var root = xdoc.Element("Messages");
-                File.Delete(fileName);
-                return root;
-            }
+                if (File.Exists(fileName))
+                {
+                    var xdoc = XDocument.Load(fileName);
+                    var root = xdoc.Element("Messages");
+                    File.Delete(fileName);
+                    return root;
+                }            
             return new XElement("Messages");
         }
 
-        public void Save(TransferMessage message)
+        public virtual void Save(object[] message)
         {
-            try
+            //сохраняем полученные сообщения
+            lock (sync)
             {
-                //if (!File.Exists(fileName))
-                //{
-                //    root = new XElement("Messages");
-                //}
-                //else
-                //{
-                //    xdoc = XDocument.Load(fileName);
-                //    root = xdoc.Element("Messages");
-                //    File.Delete(fileName);
-                //}
+
+                if (!(message is TransferMessage[] mes))
+                    throw new Exception("Неверный тип. Неоходим TransferMessage");
+                if (mes == null)
+                    return;
 
                 var xdoc = new XDocument();
                 XElement root = CheckExistFile();
 
-
-                root.Add(new XElement("Message",
-                    new XAttribute("text", message.Message),
-                    new XElement("ip", message.ip),
-                    new XElement("DateTime", DateTime.Now.ToString())));
+                foreach (var item in mes)
+                {
+                    root.Add(new XElement("Message",
+                        new XAttribute("text", item.Message),
+                        new XElement("ip", item.ip),
+                        new XElement("DateTime", DateTime.Now.ToString())));
+                }
                 xdoc.Add(root);
                 xdoc.Save(fileName);
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+        }
+
+        public virtual void Update(object[] message)
+        {
         }
     }
 }

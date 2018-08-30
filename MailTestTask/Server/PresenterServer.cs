@@ -23,8 +23,9 @@ namespace Server
             TransferService.Message += TransferService_Message;
         }
 
-        private void TransferService_Message(Data.TransferMessage transferMessage, object sender)
+        private void TransferService_Message(Data.TransferMessage[] transferMessage, object sender)
         {
+            //получение сообщений севером
             try
             {
                 model.Save(transferMessage);
@@ -40,6 +41,7 @@ namespace Server
 
         public void PrintData()
         {
+            //печатаем сообщения
             try
             {
                 view.PrintData(model.GetData());
@@ -50,8 +52,9 @@ namespace Server
             }
         }
 
-            public void StartStopServer()
+        public void StartStopServer()
         {
+            //Запуск/останов сервера
             blnStartStop = !blnStartStop;
             if (blnStartStop)
             {

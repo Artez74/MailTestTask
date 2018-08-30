@@ -11,7 +11,7 @@ namespace Server
     {
         void ChangeBtnStartStop(bool state);
         void ShowErrorMessage(string errorMessage);
-        void ShowEnterMessage(TransferMessage transferMessage);
+        void ShowEnterMessage(TransferMessage[] transferMessage);
         void PrintData(IEnumerable<PrintMessage> printMessages);
     }
 }

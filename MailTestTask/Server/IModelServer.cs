@@ -10,7 +10,7 @@ namespace Server
     interface IModelServer
     {
         //ICollection<PrintMessage> GetMessages();
-        void Save(TransferMessage transferMessage);
+        void Save(TransferMessage[] transferMessage);
         IEnumerable<PrintMessage> GetData();
         
     }

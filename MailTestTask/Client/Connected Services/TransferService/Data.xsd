@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfTransferMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransferMessage" nillable="true" type="tns:TransferMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransferMessage" nillable="true" type="tns:ArrayOfTransferMessage" />
   <xs:complexType name="TransferMessage">
-    <xs:annotation>
-      <xs:appinfo>
-        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
-      </xs:appinfo>
-    </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ip" nillable="true" type="xs:string" />

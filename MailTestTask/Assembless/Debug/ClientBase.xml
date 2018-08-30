@@ -1,43 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Messages>
   <Message text="321">
-    <ip>88.206.3.17</ip>
-    <DateTime>30.08.2018 16:46:29</DateTime>
+    <IsTransfer>true</IsTransfer>
+    <DateTime>30.08.2018 16:46:04</DateTime>
   </Message>
   <Message text="qwert">
-    <ip>88.206.3.17</ip>
-    <DateTime>30.08.2018 16:46:29</DateTime>
+    <IsTransfer>true</IsTransfer>
+    <DateTime>30.08.2018 16:46:08</DateTime>
   </Message>
   <Message text="789">
-    <ip>::1</ip>
+    <IsTransfer>true</IsTransfer>
     <DateTime>30.08.2018 16:56:46</DateTime>
   </Message>
   <Message text="9879">
-    <ip>::1</ip>
+    <IsTransfer>true</IsTransfer>
     <DateTime>30.08.2018 17:11:48</DateTime>
   </Message>
   <Message text="13">
-    <ip>::1</ip>
+    <IsTransfer>true</IsTransfer>
     <DateTime>30.08.2018 17:12:29</DateTime>
   </Message>
   <Message text="66">
-    <ip>::1</ip>
+    <IsTransfer>true</IsTransfer>
     <DateTime>30.08.2018 17:12:38</DateTime>
   </Message>
   <Message text="dsd">
-    <ip>::1</ip>
+    <IsTransfer>true</IsTransfer>
     <DateTime>30.08.2018 17:20:39</DateTime>
   </Message>
-  <Message text="www">
-    <ip>127.0.0.1</ip>
-    <DateTime>30.08.2018 17:24:12</DateTime>
-  </Message>
   <Message text="qqq">
-    <ip>::1</ip>
+    <IsTransfer>true</IsTransfer>
+    <DateTime>30.08.2018 17:24:07</DateTime>
+  </Message>
+  <Message text="www">
+    <IsTransfer>true</IsTransfer>
     <DateTime>30.08.2018 17:24:12</DateTime>
   </Message>
   <Message text="1222">
-    <ip>::1</ip>
+    <IsTransfer>true</IsTransfer>
     <DateTime>30.08.2018 19:28:33</DateTime>
   </Message>
 </Messages>

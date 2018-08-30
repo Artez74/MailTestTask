@@ -7,7 +7,7 @@ namespace Transfer
     interface ITransferService
     {
         [OperationContract]
-        int SaveData(TransferMessage dataMessage);
+        int SaveData(TransferMessage[] dataMessage);
 
     }
 }

@@ -93,6 +93,7 @@
             this.MainMenuStrip = this.MainMenu;
             this.Name = "FormServer";
             this.Text = "Server";
+            this.Load += new System.EventHandler(this.FormServer_Load);
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.ResumeLayout(false);
